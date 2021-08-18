@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;  
+}
+
+.header {
+  background-color: #635854;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 4px solid #3596F5;
+}
+
+.navbar {
+  max-width: 1280px;
+  margin: auto;
+  display: flex; /* сделали блок гибким */
+  justify-content: space-between; /* Расствали элементы по краям */
+  align-items: center;  /* РАсствавили элементы по вертикали по центру */
+  /* действия для самой навигационной панеил */
+}
+
+.navbar-menu {
+  margin: 0; /* убрали внешние отступы */
+  padding: 0;  /* убрали внутренние отступы */
+  list-style: none; /* отключаем точки у списка */
+  display: flex; /* выстроили пункты меню в строку */
+  text-align: center; /*  */
+}
+
+.navbar-item {
+  margin-left: 40px;  /* внешний отступ слева 40 */
+  margin-right: 40px; /* внешний отступ справа 40 */
+  /* действия для элементов в навигационной панели */
+  }
+
+.navbar-link {
+  text-decoration: none; /* убрали подчеркивание ссылок */
+  color: #fff; /* покрасили текст в белый цвет */
+/* действия для ссылок в навигационной панели */
+}
+
+.navbar-contacts {
+  text-align: right;
+  /* выравнивание всего блока контактов по правой стороне */
+}
+
+.navbar-text {
+  display: block;
+  color: #fff;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  /* настройка текста который отображается на странице */
+  }
+
+ .navbar-phone {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #fff;
+  /* работа с номером телефона который отображается на странице */
+ } 

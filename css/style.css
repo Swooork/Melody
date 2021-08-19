@@ -1,9 +1,19 @@
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("BebasNeueRegular"), url("../fonts/BebasNeueRegular.woff2") format("woff2"),
+    url("../fonts/BebasNeueRegular.woff") format("woff");
+    font-display: swap;
+}
+
+
 * {
   box-sizing: border-box;
+  /* автоматический рассчет размерности блоков а не контента */
 }
 
 body {
   font-family: 'Roboto', sans-serif;  
+  /* подключили шрифт для страницы */
 }
 
 .header {
@@ -11,6 +21,7 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
   border-bottom: 4px solid #3596F5;
+  /* шапка сайта, цвет, отступы, и нижняя линия рамки */
 }
 
 .navbar {
@@ -66,3 +77,82 @@ body {
   color: #fff;
   /* работа с номером телефона который отображается на странице */
  } 
+
+ .main {
+  max-width: 1280px;
+  margin: auto;
+  padding-top: 54px;
+  display: flex;
+  /* блок всего главного контента, чтобы он был растянут на всю ширину, и выравнивание блоков по-порядку */
+ }
+
+.main-info {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* блок с счетчиком этажей и кнопкой "смотреть квартиры на этаже" */
+}
+
+ .home-image path {
+  opacity: 0;
+  cursor: pointer;
+  /* подсветка выбранных этажей отсутствует, при наведении вместо курсора стрелки появляется курсор указательный палец*/
+}
+
+.home-image path:hover {
+  opacity: 1;
+  /* при наведении на выбрынный этаж он подсвечивается */
+}
+
+.counter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* группа в которой находятся номер этажа и счетчик этажей */
+}
+
+.counter-button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  /* убрать цвет и рамку с кнопок счетчика */
+
+
+}
+
+.counter-arrow-down {
+  transform: rotateX(180deg);
+  /* перевернутая стрелка счетчика */
+}
+
+.main-title {
+  margin: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: normal;
+  font-size: 37px;
+  line-height: 44px;  
+  color: #635854;
+  /* подключили новый шрифт для надвипи "выберите желаемый этаж", и отформатировали его по макету */
+}
+
+.counter {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: normal;
+  color: #635854;
+  font-size: 124px;
+  margin-top: 10px;
+  /* шрифт для цифр в счетчике, его размер и цвет */
+}
+
+.button-primary {
+  background: #3596F5;
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+  padding: 16px 36px;
+  cursor:pointer;
+  /* кнопка просмотра квартир на этаже */
+}

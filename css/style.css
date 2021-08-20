@@ -7,21 +7,20 @@
 
 
 * {
-  box-sizing: border-box;
   /* автоматический рассчет размерности блоков а не контента */
-}
+  box-sizing: border-box;}
 
 body {
-  font-family: 'Roboto', sans-serif;  
   /* подключили шрифт для страницы */
+  font-family: 'Roboto', sans-serif;   
 }
 
 .header {
+  /* шапка сайта, цвет, отступы, и нижняя линия рамки */
   background-color: #635854;
   padding-top: 12px;
   padding-bottom: 12px;
-  border-bottom: 4px solid #3596F5;
-  /* шапка сайта, цвет, отступы, и нижняя линия рамки */
+  border-bottom: 4px solid #3596F5;  
 }
 
 .navbar {
@@ -42,15 +41,15 @@ body {
 }
 
 .navbar-item {
+  /* действия для элементов в навигационной панели */
   margin-left: 40px;  /* внешний отступ слева 40 */
   margin-right: 40px; /* внешний отступ справа 40 */
-  /* действия для элементов в навигационной панели */
   }
 
 .navbar-link {
+  /* действия для ссылок в навигационной панели */
   text-decoration: none; /* убрали подчеркивание ссылок */
   color: #fff; /* покрасили текст в белый цвет */
-/* действия для ссылок в навигационной панели */
 }
 
 .navbar-contacts {
@@ -59,52 +58,52 @@ body {
 }
 
 .navbar-text {
+  /* настройка текста который отображается на странице */
   display: block;
   color: #fff;
   margin-bottom: 4px;
   font-size: 14px;
-  line-height: 16px;
-  /* настройка текста который отображается на странице */
+  line-height: 16px;  
   }
 
  .navbar-phone {
+  /* работа с номером телефона который отображается на странице */
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   text-decoration: none;
-  color: #fff;
-  /* работа с номером телефона который отображается на странице */
+  color: #fff;  
  } 
 
  .main {
+   /* блок всего главного контента, чтобы он был растянут на всю ширину, и выравнивание блоков по-порядку */
   max-width: 1280px;
   margin: auto;
   padding-top: 54px;
-  display: flex;
-  /* блок всего главного контента, чтобы он был растянут на всю ширину, и выравнивание блоков по-порядку */
+  display: flex;  
  }
 
 .main-info {
+  /* блок с счетчиком этажей и кнопкой "смотреть квартиры на этаже" */
   flex-grow: 1;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  /* блок с счетчиком этажей и кнопкой "смотреть квартиры на этаже" */
+  justify-content: space-between;  
 }
 
  .home-image path {
+  /* подсветка выбранных этажей отсутствует, при наведении вместо курсора стрелки появляется курсор указательный палец*/
   opacity: 0;
   cursor: pointer;
-  /* подсветка выбранных этажей отсутствует, при наведении вместо курсора стрелки появляется курсор указательный палец*/
 }
 
 .home-image path:hover {
-  opacity: 1;
   /* при наведении на выбрынный этаж он подсвечивается */
+  opacity: 1;  
 }
 
 path.current-floor {
@@ -112,51 +111,166 @@ path.current-floor {
 }
 
 .counter-group {
+  /* группа в которой находятся номер этажа и счетчик этажей */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* группа в которой находятся номер этажа и счетчик этажей */
+  align-items: center;  
 }
 
 .counter-button {
+  /* убрать цвет и рамку с кнопок счетчика */
   background-color: #fff;
   border: none;
   cursor: pointer;
-  /* убрать цвет и рамку с кнопок счетчика */
-
-
 }
 
 .counter-arrow-down {
-  transform: rotateX(180deg);
   /* перевернутая стрелка счетчика */
+  transform: rotateX(180deg);  
 }
 
 .main-title {
+  /* подключили новый шрифт для надвипи "выберите желаемый этаж", и отформатировали его по макету */
   margin: 0;
   font-family: 'Bebas Neue', sans-serif;
   font-weight: normal;
   font-size: 37px;
   line-height: 44px;  
-  color: #635854;
-  /* подключили новый шрифт для надвипи "выберите желаемый этаж", и отформатировали его по макету */
+  color: #635854;  
 }
 
-.counter {
+.floor-counter {
+  /* шрифт для цифр в счетчике, его размер и цвет */
   font-family: 'Bebas Neue', sans-serif;
   font-weight: normal;
   color: #635854;
   font-size: 124px;
-  margin-top: 10px;
-  /* шрифт для цифр в счетчике, его размер и цвет */
+  margin-top: 10px;  
 }
 
 .button-primary {
+  /* кнопка просмотра квартир на этаже */
   background: #3596F5;
   border-radius: 6px;
   color: #fff;
   border: none;
   padding: 16px 36px;
-  cursor:pointer;
-  /* кнопка просмотра квартир на этаже */
+  cursor:pointer;  
+}
+
+.modal {
+  /* подложка для модального окна */
+  position: fixed;   /* фиксированная позиция, поверх всего сайта */
+  left: 0;  /* приклеиваем к левому краю */
+  top: 0;  /* приклеиваем к верух */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);   /* полупрозрачный фоновой черный цвеь */
+  display: flex;  /* родительский элемент гибкий */
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s;
+}
+
+.is-open {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-dialog {
+  /* модальное окно */
+  position: relative;
+  max-width: 1000px;
+  min-height: 565px;
+  background: #fff;
+  flex-grow: 1;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: transform 0.2s, opacity 0.2s;
+  transition-delay: 0.2s;
+}
+
+.is-open > .modal-dialog  {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-image {
+  /* часть модального окна с планом этажа */
+  background-color: #ebebeb;
+  width: 60%;
+  text-align: center;  /* весь текст по центру */
+  padding: 50px;
+}
+
+.flats path{
+  /* убрать подсветку на ненаведенные квартиры */
+  opacity: 0;
+  cursor: pointer;
+}
+
+.flats path:hover{
+  /* подсветка квартиры при наведении */
+  opacity: 1;
+  cursor: pointer;
+}
+
+.modal-title {
+  /* заголовок с названием этажа */
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: normal;
+  font-style: 24px;
+  line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.modal-info {
+  width: 40%;
+  padding: 50px 46px;
+}
+
+.flat-list {
+  font-family: "Roboto";
+  padding: 0;
+  list-style: none;
+  margin-top: 55px;
+  
+}
+
+.flat-item {
+  margin-bottom: 10px;
+}
+
+.flat-link {
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854;
+  text-decoration: none;
+  }
+
+.flat-link:hover {
+  color: #3596F5;
+  text-decoration: underline;
+}
+
+.modal-alert {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854; 
+  margin-top: 56px;
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 27px;
+  top: 38px;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
 }
